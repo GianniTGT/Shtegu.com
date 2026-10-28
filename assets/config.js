@@ -21,11 +21,4 @@ window.SHTEGU = {
 
   // Seksionet në ballinë, sipas radhës.
   homeSections: ["aktuale", "diaspora", "ekonomi", "sport", "opinione", "showbiz"],
-
-  ads: {
-    // Të njëjtat kontakte si në faqen aktuale.
-    email: "giannitifeki@gmail.com",
-    whatsapp: "41762411974",
-    prices: [["1 javë", "50 €"], ["1 muaj", "150 €"]],
-  },
 };

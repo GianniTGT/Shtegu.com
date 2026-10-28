@@ -158,7 +158,7 @@
           <p>Portal lajmesh në gjuhën shqipe për shqiptarët në Zvicër, në trojet shqiptare dhe në botë.</p>
         </div>
         <nav>${C.nav.slice(0, 8).map(([slug, name]) => `<a href="${catUrl(slug)}">${esc(name)}</a>`).join("")}</nav>
-        <nav><a href="artikulli.html?f=kontakti">Kontakti</a><a href="artikulli.html?f=impressum">Impressum</a><a href="#reklama">Reklamohu</a></nav>
+        <nav><a href="artikulli.html?f=kontakti">Kontakti</a><a href="artikulli.html?f=impressum">Impressum</a></nav>
       </div>
       <div class="wrap copy">© ${new Date().getFullYear()} Shtegu.com</div></footer>`;
   }
@@ -167,13 +167,7 @@
     const el = $("#sidebar");
     if (!el) return;
     el.innerHTML = `
-      <section class="box"><h2 class="box-title">Më të fundit</h2><div id="latest"><div class="skeleton" style="height:16rem"></div></div></section>
-      <section class="box ad" id="reklama">
-        <h2 class="box-title">Reklamohu këtu</h2>
-        <ul>${C.ads.prices.map(([k, v]) => `<li><span>${esc(k)}</span><strong>${esc(v)}</strong></li>`).join("")}</ul>
-        <a class="btn" href="mailto:${esc(C.ads.email)}?subject=${encodeURIComponent("Interesim për marketing")}">Dërgo email</a>
-        <a class="btn btn-ghost" href="https://wa.me/${esc(C.ads.whatsapp)}" target="_blank" rel="noopener">Kontakt në WhatsApp</a>
-      </section>`;
+      <section class="box"><h2 class="box-title">Më të fundit</h2><div id="latest"><div class="skeleton" style="height:16rem"></div></div></section>`;
     try {
       const { data } = await posts({ per: 8 });
       $("#latest").innerHTML = data.map(row).join("");

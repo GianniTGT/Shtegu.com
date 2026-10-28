@@ -116,10 +116,6 @@ body[data-page="list"] .layout, body[data-page="article"] .layout { margin-top: 
 /* ---------- Sidebar ---------- */
 .sidebar { display: flex; flex-direction: column; gap: 28px; }
 .box-title { font: 800 14px var(--sans); text-transform: uppercase; letter-spacing: .08em; border-bottom: 2px solid var(--red); padding-bottom: 8px; margin-bottom: 8px; }
-.ad { background: var(--bg-2); border-radius: var(--radius); padding: 18px; display: flex; flex-direction: column; gap: 10px; }
-.ad ul { list-style: none; padding: 0; margin: 0 0 4px; }
-.ad li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--line); }
-.ad strong { color: var(--red); }
 
 /* ---------- List ---------- */
 .page-title { font-size: clamp(28px, 4vw, 40px); padding-bottom: 12px; border-bottom: 2px solid var(--ink); }
